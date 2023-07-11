@@ -19,6 +19,8 @@
     "@types/node": "20.4.1",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
+    "@types/styled-components": "^5.1.26",
+    "babel-plugin-styled-components": "^2.1.4",
     "eslint-config-next": "13.4.9",
     "next": "13.4.9",
     "react": "18.2.0",
