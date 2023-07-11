@@ -9,7 +9,7 @@
     "lint": "next lint",
     "lintt": "eslint src",
     "test": "jest",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test --watch"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.22.5",

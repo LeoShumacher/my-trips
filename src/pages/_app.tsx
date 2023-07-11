@@ -1,25 +1,22 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
-import GloblaStyles from '../../styles/global'
 
 function App ({ Component, pageProps}: AppProps) {
-    return 
+    return (
     <>
     <Head>
-        <title>React Avançado</title>
-   
+        <title>React </title>
         <link rel="shortcut icon" href="public/favicon.ico" />   
         <link rel="shortcut icon" href="public/favicon.ico" />
         <meta
          name="description"
-         content= "A simple project using TypeScript"
-         />
+         content= "A simple project using TypeScript" />
         
     </Head>
     
-    
     <Component {...pageProps} />
     </>
+    )    
 }
 export default App
