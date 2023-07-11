@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
-import globlaStyles from '../../styles/global'
+import GloblaStyles from '../../styles/global'
 
 function App ({ Component, pageProps}: AppProps) {
     return 
@@ -18,7 +18,7 @@ function App ({ Component, pageProps}: AppProps) {
         
     </Head>
     
-    <GloblaStyles />
+    
     <Component {...pageProps} />
     </>
 }
