@@ -12,6 +12,8 @@ function App ({ Component, pageProps}: AppProps) {
         <title>React </title>
         <link rel="shortcut icon" href="public/favicon.ico" />   
         <link rel="shortcut icon" href="public/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#06092b"/>
         <meta
          name="description"
          content= "A simple project using TypeScript" />
