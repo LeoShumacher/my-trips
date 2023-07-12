@@ -1,8 +1,13 @@
-const Main = () => <div>
-    <h1>React Avançado</h1>
+import * as S from './styles'
 
+const Main = () => (
 
-</div>
+    <S.Wrapper>
+        <S.Title>React Avançado</S.Title>
+        <S.Description>TypeScript, ReactJS, NextJS e StyledComponents</S.Description>
+    </S.Wrapper>
+
+)
 
 export default Main;
 
