@@ -11,9 +11,8 @@ import { createGlobalStyle } from 'styled-components'
 
 
     body {
-        background-color: #000;
+        background-color: #06092b;
     }
-    
     `
 
 export default GlobalStyles

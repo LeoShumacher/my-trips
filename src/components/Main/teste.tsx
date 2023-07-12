@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import Main from '.'
+import { toHaveStyle } from '@testing-library/jest-dom/matchers';
 
 
 describe ('<Main />', () => {
@@ -13,5 +14,13 @@ describe ('<Main />', () => {
         expect(container.firstChild).toMatchSnapchot()
 
     });
+
+    it ('should render colors the correct', () => {
+
+        const { container } = render(<Main />)
+
+        expect(container.firstChild).toHaveStyle({'color: #fff;':toHaveStyle})
+
+    })
 })
 
