@@ -4036,6 +4036,13 @@ jest-snapshot@^29.6.1:
     pretty-format "^29.6.1"
     semver "^7.5.3"
 
+jest-styled-components@^7.1.1:
+  version "7.1.1"
+  resolved "https://registry.npmjs.org/jest-styled-components/-/jest-styled-components-7.1.1.tgz"
+  integrity sha512-OUq31R5CivBF8oy81dnegNQrRW13TugMol/Dz6ZnFfEyo03exLASod7YGwyHGuayYlKmCstPtz0RQ1+NrAbIIA==
+  dependencies:
+    "@adobe/css-tools" "^4.0.1"
+
 jest-util@^29.6.1:
   version "29.6.1"
   resolved "https://registry.npmjs.org/jest-util/-/jest-util-29.6.1.tgz"
@@ -5223,7 +5230,7 @@ strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
   resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
-styled-components@^6.0.3, "styled-components@>= 2":
+styled-components@^6.0.3, "styled-components@>= 2", "styled-components@>= 5":
   version "6.0.3"
   resolved "https://registry.npmjs.org/styled-components/-/styled-components-6.0.3.tgz"
   integrity sha512-qEyWvDK4CYCyDckNIruRJIcQSvcUR3dVEw/fwxu1v0LFzUMPr2uf5PhXHp17FkGK+S4TkglOS+XIealo1MssQA==
