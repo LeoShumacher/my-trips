@@ -9,14 +9,14 @@ function App ({ Component, pageProps}: AppProps) {
 
 
     <Head>
-        <title>React </title>
+        <title>My Trips </title>
         <link rel="shortcut icon" href="public/favicon.ico" />   
         <link rel="shortcut icon" href="public/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#06092b"/>
         <meta
          name="description"
-         content= "A simple project using TypeScript" />
+         content= "A simple project to show my favorits spots in the world" />
         
     </Head>
 
