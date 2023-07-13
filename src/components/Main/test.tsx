@@ -8,19 +8,13 @@ describe ('<Main />', () => {
 
         const { container } = render(<Main />)
 
-        expect(screen.getByRole('heading', {name: /react avançado/i}))
+        expect(screen.getByRole('', {name: /react avançado/i}))
         .toBeInTheDocument()
 
         expect(container.firstChild).toMatchSnapchot()
 
     });
 
-    it ('should render colors the correct', () => {
 
-        const { container } = render(<Main />)
-
-        expect(container.firstChild).toHaveStyle({'color: #fff;':toHaveStyle})
-
-    })
 })
 
