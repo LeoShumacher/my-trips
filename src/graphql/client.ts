@@ -10,3 +10,5 @@ const client = new GraphQLClient(endpoint,{
     }
 })
 
+export default client
+
