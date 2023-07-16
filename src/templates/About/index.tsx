@@ -4,7 +4,7 @@ import LinkWrapper from '@/components/LinkWrapper';
 import * as S from './styles'
 
 const AboutTemplate = () => (
-    <>
+<>
     <S.Content>
     <LinkWrapper href="/">
         <CloseOutline size={32} />
