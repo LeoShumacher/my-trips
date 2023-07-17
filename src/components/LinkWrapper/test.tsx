@@ -1,7 +1,7 @@
 import { render,screen } from "@testing-library/react";
 import LinkWrapper from ".";
 
-describe('<LinkWrapper/>'), () => {
+describe('<LinkWrapper/>', () => {
 
     it('should render link and children', () => {
 
@@ -13,4 +13,4 @@ describe('<LinkWrapper/>'), () => {
         expect(children).toHaveAttribute('href', '/my-link')
     })
 
-}
+})
