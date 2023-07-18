@@ -1,5 +1,7 @@
+import Place from '@/pages/place/[slug]'
+import Router, { useRouter } from 'next/router'
 import { title } from 'process'
-import { MapContainer, TileLayer, Marker, Popup,  } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 
 type Place = {
   id: string
@@ -16,6 +18,7 @@ export type MapProps = {
 }
 
 const Map = ({ places}: MapProps) => {
+  const router = useRouter()
   
   return (
 
@@ -30,14 +33,19 @@ const Map = ({ places}: MapProps) => {
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      {places?.map(({ id, name, location}) => {
+      {places?.map(({ id, name,slug, location}) => {
         const { latitude, longitude } = location
 
         return (
-          <Marker 
-          key={`place-${id}`}
-          position={[latitude, longitude]}
-          title={name}
+          <Marker
+            key={`place-${id}`}
+            position={[latitude, longitude]}
+            title={name}
+            eventHandlers={{
+              click: () => {
+                router.push(`/place/${ slug }`)
+              }
+            }}
           />
         )
         
