@@ -12,7 +12,7 @@ export default function Page({heading, body}: PageTemplateProps) {
 
     if(router.isFallback) return null 
 
-    return <PageTemplate />
+    return <PageTemplate heading={heading} body={body} />
 }
 
 //gerando as urls
@@ -30,20 +30,21 @@ export async function getStaticPaths() {
 
 //gerando os dados
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-    const { page } = await client.request<GetPageBtSlugQuery>(GET_PAGE_BY_SLUG, {
-      slug: `${params?.slug}`
+export const getStaticProps: GetStaticProps = async({params}) => {
+
+    const {page} = await client.request<GetPageBtSlugQuery>(GET_PAGE_BY_SLUG, {
+        slug: `${params?.slug}`
+
     })
-  
-    if (!page) return { notFound: true }
-  
+    
     return {
-      props: {
-        heading: page.heading,
-        body: page.body.html
-      }
+        props: {
+            heading: page?.heading,
+            body: page?.body.html
+        }
     }
-  }
+}
+
 
 
 

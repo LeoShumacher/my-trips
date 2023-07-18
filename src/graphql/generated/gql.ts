@@ -15,6 +15,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
 const documents = {
     "\n\n    query getPages {\n        pages {\n            id\n            heading\n            slug\n            body {\n                html\n            }\n        }\n    }\n": types.GetPagesDocument,
     "\n    \n    query getPageBtSlug ($slug: String!){\n        page(where: {slug: $slug}){\n          id\n          slug\n          heading\n          body {\n            html\n          }\n        }\n     }\n": types.GetPageBtSlugDocument,
+    "\n        query getPlaces {\n            places {\n            id\n            slug\n            name\n            location {\n                latitude\n                longitude\n            }\n            \n            description {\n                html\n            }\n            \n            gallery {\n                url\n                width\n                height\n            }\n        }\n        }\n": types.GetPlacesDocument,
 };
 
 /**
@@ -39,6 +40,10 @@ export function graphql(source: "\n\n    query getPages {\n        pages {\n    
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function graphql(source: "\n    \n    query getPageBtSlug ($slug: String!){\n        page(where: {slug: $slug}){\n          id\n          slug\n          heading\n          body {\n            html\n          }\n        }\n     }\n"): (typeof documents)["\n    \n    query getPageBtSlug ($slug: String!){\n        page(where: {slug: $slug}){\n          id\n          slug\n          heading\n          body {\n            html\n          }\n        }\n     }\n"];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "\n        query getPlaces {\n            places {\n            id\n            slug\n            name\n            location {\n                latitude\n                longitude\n            }\n            \n            description {\n                html\n            }\n            \n            gallery {\n                url\n                width\n                height\n            }\n        }\n        }\n"): (typeof documents)["\n        query getPlaces {\n            places {\n            id\n            slug\n            name\n            location {\n                latitude\n                longitude\n            }\n            \n            description {\n                html\n            }\n            \n            gallery {\n                url\n                width\n                height\n            }\n        }\n        }\n"];
 
 export function graphql(source: string) {
   return (documents as any)[source] ?? {};
