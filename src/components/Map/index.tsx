@@ -2,6 +2,8 @@ import Place from '@/pages/place/[slug]'
 import  { useRouter } from 'next/router'
 import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 
+import * as S from './styles'
+
 type Place = {
   id: string
   name: string
@@ -39,7 +41,7 @@ const Map = ({ places}: MapProps) => {
   
   return (
 
-
+    <S.MapWrapper>
     <MapContainer
     center={[0,0]}
     style = {{height: '100%', width: '100%'}}
@@ -66,6 +68,7 @@ const Map = ({ places}: MapProps) => {
 
       })}
     </MapContainer>
+    </S.MapWrapper>
 )
 
 }
