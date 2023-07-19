@@ -3,7 +3,6 @@ import client from "@/graphql/client"
 import { useRouter } from "next/router";
 import { GetStaticProps } from "next";
 import PageTemplate, { PageTemplateProps } from "@/templates/Pages";
-import { constants } from "crypto";
 import { GetPageBtSlugQuery, GetPagesQuery } from "@/graphql/generated/graphql";
 
 export default function Page({heading, body}: PageTemplateProps) {

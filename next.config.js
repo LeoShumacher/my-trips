@@ -24,3 +24,9 @@ module.exports = withPWA({
     disable: !isProd
   }
 })
+
+module.exports = {
+  images: {
+    domains: ['media.graphassets.com'],
+  },
+}

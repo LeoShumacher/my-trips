@@ -2,8 +2,7 @@ import { GET_PLACES, GET_PLACE_BY_SLUG } from "@/graphql/queries";
 import client from "@/graphql/client"
 import { useRouter } from "next/router";
 import { GetStaticProps } from "next";
-import { constants } from "crypto";
-import { GetPageBtSlugQuery, GetPlacesQuery, GetPlaceBySlugQuery } from "@/graphql/generated/graphql";
+import { GetPlacesQuery, GetPlaceBySlugQuery } from "@/graphql/generated/graphql";
 import PlacesTemplate, { PlacesTemplateProps } from "@/templates/Places";
 
 export default function Place({ place }: PlacesTemplateProps) {
@@ -44,6 +43,7 @@ export const getStaticProps: GetStaticProps = async({params}) => {
         }
     }
 }
+
 
 
 
