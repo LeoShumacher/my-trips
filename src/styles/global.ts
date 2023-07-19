@@ -36,6 +36,10 @@ import { createGlobalStyle } from 'styled-components'
     }
 
     a {
+        color: #FFF;
+    }
+
+    a:hover {
         color: var(--highlight);
     }
 
