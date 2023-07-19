@@ -3,6 +3,7 @@ import  { useRouter } from 'next/router'
 import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 
 import * as S from './styles'
+import { set } from 'nprogress'
 
 type Place = {
   id: string
@@ -42,11 +43,17 @@ const Map = ({ places}: MapProps) => {
   return (
 
     <S.MapWrapper>
-    <MapContainer
-    center={[0,0]}
-    style = {{height: '100%', width: '100%'}}
-    zoom={3}
-    >
+      <MapContainer
+        center={[0,0]}
+        zoom={1}
+        style={{ height: '100%', width: '100%' }}
+        minZoom={2}
+        maxBounds={[
+          [-180, 180],
+          [180, -180]
+        ]}
+      >
+
           <CustomTileLayer />
     
       {places?.map(({ id, name,slug, location}) => {
